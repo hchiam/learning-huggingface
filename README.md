@@ -1,6 +1,6 @@
 # Learning about [Hugging Face](https://huggingface.co/)
 
-Models, datasets, spaces (spaces are interactive demos), and more: https://huggingface.co
+Try out [ML](https://github.com/hchiam/learning-ml) models quickly with existing models, datasets, spaces (spaces are interactive demos), and more: https://huggingface.co
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
