@@ -1,47 +1,36 @@
-# Learning template [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/hchiam/learning-template/blob/main/LICENSE)
+# Learning about [Hugging Face](https://huggingface.co/)
+
+Models, datasets, spaces (spaces are interactive demos), and more: https://huggingface.co
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
-(To use this template fast with [`gh` CLI](https://github.com/hchiam/learning-gh), you can run [`gh repo create --template learning-template learning-...`](https://cli.github.com/manual/gh_repo_create) or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-repo-from-template.sh).)
+## Quick minimal example of using a model
 
-(To create a convenience script repo, use this template instead: https://github.com/hchiam/convenience)
+You can get started quickly with a model you find on Hugging Face, like this model: https://huggingface.co/openai-gpt#how-to-get-started-with-the-model
 
-(To create a website fast, use a code generator like [`create-next-app`](https://github.com/hchiam/learning-nextjs), [`sapper`](https://github.com/hchiam/learning-sapper), a [svelte template](https://github.com/sveltejs/template), [`yo`](https://yeoman.io/generators), or my [project-template](https://github.com/hchiam/project-template))
+Consider copying the following code into a Google Colab to run on the cloud instead of on your computer: https://colab.research.google.com
 
-(Use the redirect template https://github.com/hchiam/learning-redirect to enhance discoverability. Or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-redirect-repo-from-template.sh))
-
-<!-- Add reference link(s) here -->
-
-## From scratch
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn):
-
-```bash
-yarn add
+```py
+! pip install transformers
+from transformers import pipeline
+generator = pipeline('text-generation', model='openai-gpt')
+generator("Hello, I'm a language model,", max_length=30, num_return_sequences=5)
 ```
 
-Or with `npm`:
+## More examples
 
-```bash
-npm install
-```
+```py
+# install dependencies:
+! pip install transformers
+from transformers import pipeline
 
-And then:
+# download models:
+generator_gpt2 = pipeline('text-generation', model='gpt2') # https://huggingface.co/gpt2
+generator_openai = pipeline('text-generation', model='openai-gpt') # https://huggingface.co/openai-gpt
+classifier = pipeline("sentiment-analysis")
 
-```bash
-
-```
-
-## Starting by testing out this repo <!-- Replace "template"s and "# and then ..."s in this section -->
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && yarn; # and then ...
-```
-
-Or with `npm`: (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && npm install; # and then ...
+# actually use models:
+print(generator_gpt2("Hello, I'm a language model,", max_length=30, num_return_sequences=5))
+print(generator_openai("Hello, I'm a language model,", max_length=30, num_return_sequences=5))
+print(classifier("We are very happy to show you the 🤗 Transformers library."))
 ```
