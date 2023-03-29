@@ -11,17 +11,19 @@ You can get started quickly with a model you find on Hugging Face, like this mod
 Consider copying the following code into a Google Colab to run on the cloud instead of on your computer: https://colab.research.google.com
 
 ```py
-! pip install transformers
+! pip install transformers torch tensorflow
 from transformers import pipeline
 generator = pipeline('text-generation', model='openai-gpt')
 generator("Hello, I'm a language model,", max_length=30, num_return_sequences=5)
 ```
 
+If you're doing this on your own computer, consider instead running `pip3 install transformers torch tensorflow`.
+
 ## More examples
 
 ```py
 # install dependencies:
-! pip install transformers
+! pip install transformers torch tensorflow
 from transformers import pipeline
 
 # download models:
