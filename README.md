@@ -36,3 +36,22 @@ print(generator_gpt2("Hello, I'm a language model,", max_length=30, num_return_s
 print(generator_openai("Hello, I'm a language model,", max_length=30, num_return_sequences=5))
 print(classifier("We are very happy to show you the 🤗 Transformers library."))
 ```
+
+## more stuff to try later
+
+```sh
+pip install huggingface_hub
+huggingface-cli login
+huggingface-cli repo create repo_name --type {model, dataset, space}
+
+git lfs install
+git clone https://huggingface.co/username/repo_name
+git add .
+git commit -m "commit from $USER"
+git push
+```
+
+```py
+tokenizer = AutoTokenizer.from_pretrained("username/repo_name")
+model = AutoModel.from_pretrained("username/repo_name")
+```
