@@ -41,6 +41,10 @@ print(classifier("We are very happy to show you the 🤗 Transformers library.")
 
 Multiple choice quiz to check your understanding of the Hugging Face docs on Transformers: https://huggingface.co/course/chapter1/10?fw=pt
 
+Multiple choice quiz to check your understanding of the Hugging Face docs on NLP tasks: https://huggingface.co/course/chapter7/9?fw=pt
+
+Extractive question answering from context/document - NLP task: https://huggingface.co/course/chapter7/7?fw=pt#using-the-fine-tuned-model
+
 ```sh
 pip install huggingface_hub
 huggingface-cli login
