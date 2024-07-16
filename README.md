@@ -1,8 +1,11 @@
 # Learning about [Hugging Face](https://huggingface.co/)
 
+Just one of the things I'm learning. https://github.com/hchiam/learning
+
 Try out [ML](https://github.com/hchiam/learning-ml) models quickly with existing models, datasets, spaces (spaces are interactive demos), and more: https://huggingface.co
 
-Just one of the things I'm learning. https://github.com/hchiam/learning
+- Live demos: https://huggingface.co/spaces 
+   - For example: https://huggingface.co/spaces/DilshanKavinda/Comment_Analysis_App -> click on "Files" to see the files used to make the demo. 
 
 ## Quick minimal example of using a model
 
